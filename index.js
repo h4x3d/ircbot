@@ -25,3 +25,4 @@ client.user(config.username, config.realName);
 client.join(config.channels);
 
 client.use(require('./lib/plugins/title'));
+client.use(require('./lib/plugins/commands'));

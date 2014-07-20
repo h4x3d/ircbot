@@ -11,6 +11,7 @@
   "dependencies": {
     "slate-irc": "^0.6.0",
     "url-to-title": "^1.0.2",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "routes": "^1.1.0"
   }
 }
