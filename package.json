@@ -1,0 +1,16 @@
+{
+  "name": "ircbot",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Riku Rouvila",
+  "license": "MIT",
+  "dependencies": {
+    "slate-irc": "^0.6.0",
+    "url-to-title": "^1.0.2",
+    "lodash": "~2.4.1"
+  }
+}
