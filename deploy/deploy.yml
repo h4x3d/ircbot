@@ -4,7 +4,8 @@
   gather_facts: no
   vars_files:
     - vars.yml
-
+  roles:
+    - mongodb
   tasks:
     - name: Deploy from git
       remote_user: "{{ service_user }}"

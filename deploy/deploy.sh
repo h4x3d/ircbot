@@ -15,4 +15,4 @@ if ! which ansible > /dev/null; then
 fi
 
 cd $(dirname $0)
-ansible-playbook deploy.yml -i hosts -vvvv
+ansible-playbook deploy.yml -i hosts

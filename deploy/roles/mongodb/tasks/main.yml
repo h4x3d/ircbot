@@ -1,0 +1,5 @@
+---
+- name: Install MongoDB
+  apt: pkg=mongodb
+  sudo: yes
+  remote_user: "{{ service_user }}"
