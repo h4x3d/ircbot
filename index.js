@@ -24,5 +24,6 @@ client.nick(config.nick);
 client.user(config.username, config.realName);
 client.join(config.channels);
 
-client.use(require('./lib/plugins/title'));
 client.use(require('./lib/plugins/commands'));
+client.use(require('./lib/plugins/title'));
+client.use(require('./lib/plugins/spotify'));
