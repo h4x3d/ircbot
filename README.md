@@ -1,10 +1,28 @@
 # ircbot
 
----
-## Auth
+## Installation
+### Requirements
+* [node.js](http://nodejs.org/)
+* [mongodb](http://www.mongodb.org/downloads)
+
+Clone this repository and install dependencies
+```
+git clone git@github.com:h4x3d/ircbot.git
+cd ircbot
+npm install
+```
+
+Start your bot
+```
+node index.js
+```
+
+## Usage
+
+### Auth
 Handles commands for user authentication and user management
 
-### Commands
+#### Commands
 
 ##### `!auth help`
 
@@ -47,7 +65,7 @@ Log out
 <hr>
 ---
 
-### Development
+## Development
 
 * Install package
 ```
