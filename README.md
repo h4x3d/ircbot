@@ -22,6 +22,11 @@ Remove user
 Change password
 <hr>
 
+##### `!auth reset-pass [username]`
+
+Reset password
+<hr>
+
 ##### `!auth login [username] [password]`
 
 Log in

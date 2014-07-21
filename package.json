@@ -19,6 +19,7 @@
     "mongoose": "~3.8.13",
     "bcrypt": "~0.7.8",
     "bluebird": "~2.2.2",
-    "migrate": "~0.1.4"
+    "migrate": "~0.1.4",
+    "animal-id": "0.0.1"
   }
 }
