@@ -3,28 +3,27 @@
 
 var mongoose = require('mongoose');
 var config = require('../lib/utils/config');
-var User = require('../lib/models/user');
+var Config = require('../lib/models/config');
 
 exports.up = function(next){
 
   mongoose.connect('mongodb://' + config.database.host + '/' + config.database.name);
 
-  User.find({}).exec()
-  .then(function(users) {
-    if(users.length > 0) {
+  Config.find({}).exec()
+  .then(function(configs) {
+    if(configs.length > 0) {
       return;
     }
-    return User.create({
-      username: config.admin.username,
-      password: config.admin.password
-    });
-
+    return Config.create(config);
   })
   .onResolve(function(err) {
+
     if(err) {
       return console.error(err, err.stack);
     }
+
     mongoose.disconnect(next);
+
   });
 };
 

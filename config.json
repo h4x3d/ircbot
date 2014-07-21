@@ -1,0 +1,24 @@
+{
+  "all": {
+    "nickname": "botti",
+    "username": "botti",
+    "realName": "botti the bot",
+    "host": "localhost",
+    "port": 6667,
+    "channels": ["#test"],
+    "database": {
+      "name": "ircbot",
+      "host": "localhost"
+    },
+    "admin": {
+      "username": "admin",
+      "password": "foobar"
+    }
+  },
+  "production": {
+    "host": "irc.quakenet.org",
+    "channels": ["#h4x3d", "#riku"]
+  },
+  "development": {}
+}
+

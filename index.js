@@ -5,46 +5,49 @@ var irc = require('slate-irc');
 var net = require('net');
 var mongoose = require('mongoose');
 
-var env = process.env.NODE_ENV || 'development';
-var production = env === 'production';
+var config = require('./lib/utils/config');
+var Config = require('./lib/models/config');
 
-var config = {
-  nickname: 'botti',
-  username: 'botti',
-  realName: 'botti the bot',
-  host: production ? 'irc.quakenet.org' : 'localhost',
-  port: 6667,
-  channels: production ? ['#h4x3d', '#riku'] : ['#test'],
-  database: 'ircbot'
-};
+var logger = require('./lib/plugins/logger');
 
-mongoose.connect('mongodb://localhost/' + config.database);
+mongoose.connect('mongodb://' + config.database.host + '/' + config.database.name);
 
-var stream = net.connect({
-  host: config.host,
-  port: config.port,
-});
+Config.get().then(function(config) {
 
-var client = irc(stream);
-
-client.nick(config.nickname);
-client.user(config.username, config.realName);
-
-client.use(require('./lib/plugins/logger'));
-client.use(require('./lib/plugins/channels'));
-client.use(require('./lib/plugins/say'));
-client.use(require('./lib/plugins/auth'));
-client.use(require('./lib/plugins/title'));
-client.use(require('./lib/plugins/spotify'));
-
-// TODO handle somewhere else (maybe a plugin for this)
-var nicknameTries = 0;
-client.on('data', function(message) {
-  if(message.command === 'RPL_WELCOME') {
-    client.join(config.channels);
+  if(!config) {
+    throw new Error('Configuration not found. Check README for installation instructions');
   }
-  if(message.command === 'ERR_NICKNAMEINUSE') {
-    nicknameTries++;
-    client.nick(config.nickname + nicknameTries);
-  }
-});
+
+  var stream = net.connect({
+    host: config.host,
+    port: config.port,
+  });
+
+  var client = irc(stream);
+
+  client.nick(config.nickname);
+  client.user(config.username, config.realName);
+
+  client.use(logger);
+  client.use(require('./lib/plugins/channels'));
+  client.use(require('./lib/plugins/say'));
+  client.use(require('./lib/plugins/auth'));
+  client.use(require('./lib/plugins/title'));
+  client.use(require('./lib/plugins/spotify'));
+
+  // TODO handle somewhere else (maybe a plugin for this)
+  var nicknameTries = 0;
+  client.on('data', function(message) {
+    if(message.command === 'RPL_WELCOME') {
+      client.join(config.channels);
+    }
+    if(message.command === 'ERR_NICKNAMEINUSE') {
+      nicknameTries++;
+      client.nick(config.nickname + nicknameTries);
+    }
+  });
+
+}).then(function() {}, logger.error);
+
+
+
