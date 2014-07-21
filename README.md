@@ -1,7 +1,7 @@
 # ircbot
 
 ### Commands
-##### `!auth register [username] [password]`
+##### `!auth create [username] [password]`
 
 Create a new user
 <hr>
