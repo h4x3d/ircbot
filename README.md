@@ -19,6 +19,41 @@ node index.js
 
 ## Usage
 
+### Channels
+Handles joining/leaving channels
+
+#### Commands
+
+##### `!join [channel]`
+
+Joins to channel
+<hr>
+
+##### `!join [channel] [password]`
+
+Joins to channel with password
+<hr>
+
+##### `!part [channel]`
+
+Leaves channel
+<hr>
+
+##### `!part [channel] [message]`
+
+Leaves channel with part message
+<hr>
+
+### Say
+Handles sending messages to channel or nickname
+
+#### Commands
+
+##### `!say [target] [message]`
+
+Sends a message to given target (channel or nickname)
+<hr>
+
 ### Auth
 Handles commands for user authentication and user management
 
