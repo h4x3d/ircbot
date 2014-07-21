@@ -17,6 +17,11 @@ Create a new user
 Remove user
 <hr>
 
+##### `!auth change-pass [password]`
+
+Change password
+<hr>
+
 ##### `!auth login [username] [password]`
 
 Log in
