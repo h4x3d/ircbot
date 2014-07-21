@@ -69,7 +69,7 @@ List all commands
 List all user
 <hr>
 
-##### `!auth create [username] [password]`
+##### `!auth create [username]`
 
 Create a new user
 <hr>
