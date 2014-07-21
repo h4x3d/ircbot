@@ -31,7 +31,8 @@ client.nick(config.nickname);
 client.user(config.username, config.realName);
 
 client.use(require('./lib/plugins/logger'));
-client.use(require('./lib/plugins/commands'));
+client.use(require('./lib/plugins/channels'));
+client.use(require('./lib/plugins/say'));
 client.use(require('./lib/plugins/auth'));
 client.use(require('./lib/plugins/title'));
 client.use(require('./lib/plugins/spotify'));
