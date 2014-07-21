@@ -1,18 +1,32 @@
 # ircbot
 
 ### Commands
+
+##### `!auth users`
+
+List all user
+<hr>
+
 ##### `!auth create [username] [password]`
 
 Create a new user
 <hr>
+
+##### `!auth remove [username]`
+
+Remove user
+<hr>
+
 ##### `!auth login [username] [password]`
 
 Log in
 <hr>
+
 ##### `!auth logout`
 
 Log out
 <hr>
+
 ### Development
 
 * Install package
