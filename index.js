@@ -1,3 +1,6 @@
+/*jslint node: true */
+'use strict';
+
 var irc = require('slate-irc');
 var net = require('net');
 var mongoose = require('mongoose');
@@ -13,7 +16,7 @@ var config = {
   port: 6667,
   channels: production ? ['#h4x3d'] : ['#test'],
   database: 'ircbot'
-}
+};
 
 mongoose.connect('mongodb://localhost/' + config.database);
 

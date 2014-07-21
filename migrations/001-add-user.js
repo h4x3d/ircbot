@@ -1,3 +1,6 @@
+/*jslint node: true */
+'use strict';
+
 var mongoose = require('mongoose');
 var User = require('../lib/models/user');
 
@@ -15,7 +18,7 @@ exports.up = function(next){
     });
 
   }, next)
-  .then(next.bind(null, null), next)
+  .then(next.bind(null, null), next);
 };
 
 exports.down = function(next){
