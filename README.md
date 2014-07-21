@@ -1,6 +1,15 @@
 # ircbot
 
+---
+## Auth
+Handles commands for user authentication and user management
+
 ### Commands
+
+##### `!auth help`
+
+List all commands
+<hr>
 
 ##### `!auth users`
 
@@ -36,6 +45,7 @@ Log in
 
 Log out
 <hr>
+---
 
 ### Development
 
