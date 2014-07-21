@@ -1,5 +1,18 @@
 # ircbot
 
+### Commands
+##### `!auth register [username] [password]`
+
+Create a new user
+<hr>
+##### `!auth login [username] [password]`
+
+Log in
+<hr>
+##### `!auth logout`
+
+Log out
+<hr>
 ### Development
 
 * Install package
