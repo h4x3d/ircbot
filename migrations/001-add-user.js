@@ -2,7 +2,7 @@
 'use strict';
 
 var mongoose = require('mongoose');
-var config = require('../lib/utils/config');
+var config = require('../lib/config');
 var User = require('../lib/models/user');
 
 exports.up = function(next){

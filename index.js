@@ -5,7 +5,7 @@ var irc = require('slate-irc');
 var net = require('net');
 var mongoose = require('mongoose');
 
-var config = require('./lib/utils/config');
+var config = require('./lib/config');
 
 var logger = require('./lib/plugins/logger');
 
