@@ -29,6 +29,7 @@ client.use(require('./lib/plugins/title'));
 client.use(require('./lib/plugins/spotify'));
 client.use(require('./lib/plugins/h'));
 client.use(require('./lib/plugins/laugh'));
+client.use(require('./lib/plugins/api'));
 
 var nicknameTries = 0;
 
