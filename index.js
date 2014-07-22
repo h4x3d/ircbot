@@ -15,7 +15,7 @@ mongoose.connect('mongodb://' + config.database.host + '/' + config.database.nam
 Config.get().then(function(config) {
 
   if(!config) {
-    throw new Error('Configuration not found. Check README for installation instructions');
+    throw new Error('Configuration not found. Check README.md for installation instructions');
   }
 
   var stream = net.connect({
@@ -35,12 +35,13 @@ Config.get().then(function(config) {
   client.use(require('./lib/plugins/title'));
   client.use(require('./lib/plugins/spotify'));
 
-  // TODO handle somewhere else (maybe a plugin for this)
   var nicknameTries = 0;
-  client.on('data', function(message) {
-    if(message.command === 'RPL_WELCOME') {
-      client.join(config.channels);
-    }
+
+  client.on('welcome', function() {
+    client.join(config.channels);
+  });
+
+  client.on('error', function(message) {
     if(message.command === 'ERR_NICKNAMEINUSE') {
       nicknameTries++;
       client.nick(config.nickname + nicknameTries);
