@@ -35,6 +35,7 @@ Config.get().then(function(config) {
   client.use(require('./lib/plugins/title'));
   client.use(require('./lib/plugins/spotify'));
   client.use(require('./lib/plugins/h'));
+  client.use(require('./lib/plugins/laugh'));
 
   var nicknameTries = 0;
 
