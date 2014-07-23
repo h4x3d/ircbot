@@ -29,14 +29,9 @@ client.use(require('./lib/plugins/title'));
 client.use(require('./lib/plugins/spotify'));
 client.use(require('./lib/plugins/h'));
 client.use(require('./lib/plugins/laugh'));
-client.use(require('./lib/plugins/store'));
 client.use(require('./lib/plugins/api'));
 
 var nicknameTries = 0;
-
-client.on('welcome', function() {
-  client.join(config.channels);
-});
 
 client.on('error', function(message) {
   if(message.command === 'ERR_NICKNAMEINUSE') {
