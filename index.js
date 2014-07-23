@@ -30,12 +30,3 @@ client.use(require('./lib/plugins/spotify'));
 client.use(require('./lib/plugins/h'));
 client.use(require('./lib/plugins/laugh'));
 client.use(require('./lib/plugins/api'));
-
-var nicknameTries = 0;
-
-client.on('error', function(message) {
-  if(message.command === 'ERR_NICKNAMEINUSE') {
-    nicknameTries++;
-    client.nick(config.nickname + nicknameTries);
-  }
-});
