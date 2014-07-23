@@ -13,6 +13,11 @@
     "admin": {
       "username": "admin",
       "password": "foobar"
+    },
+    "plugins": {
+      "api": {
+        "session_secret": "TODO"
+      }
     }
   },
   "production": {
