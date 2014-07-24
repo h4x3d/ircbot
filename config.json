@@ -16,7 +16,7 @@
     },
     "plugins": {
       "api": {
-        "session_secret": "TODO"
+        "secret": "TODO"
       }
     }
   },

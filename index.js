@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 
 var config = require('./lib/config');
 
-var logger = require('./lib/plugins/logger');
+var logger = require('./lib/utils/logger');
 
 mongoose.connect('mongodb://' + config.database.host + '/' + config.database.name);
 
@@ -21,7 +21,7 @@ var client = irc(stream);
 client.nick(config.nickname);
 client.user(config.username, config.realName);
 
-client.use(logger);
+client.use(require('./lib/plugins/logger'));
 client.use(require('./lib/plugins/channels'));
 client.use(require('./lib/plugins/say'));
 client.use(require('./lib/plugins/auth'));
@@ -30,3 +30,5 @@ client.use(require('./lib/plugins/spotify'));
 client.use(require('./lib/plugins/h'));
 client.use(require('./lib/plugins/laugh'));
 client.use(require('./lib/plugins/api'));
+
+client.stream.on('error', logger.error);
