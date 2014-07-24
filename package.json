@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "bash deploy/deploy.sh",
-    "prepublish": "migrate"
+    "deploy": "bash deploy/deploy.sh"
   },
   "author": "Riku Rouvila",
   "license": "MIT",
@@ -19,7 +18,6 @@
     "mongoose": "~3.8.13",
     "bcrypt": "~0.7.8",
     "bluebird": "~2.2.2",
-    "migrate": "~0.1.4",
     "animal-id": "0.0.1",
     "colors": "~0.6.2",
     "express": "~4.6.1",
