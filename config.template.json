@@ -1,0 +1,21 @@
+{
+  "all": {
+    "nickname": "bot",
+    "username": "bot",
+    "realName": "bot the bot",
+    "host": "irc.freenode.net",
+    "port": 6667,
+    "database": {
+      "name": "ircbot",
+      "host": "localhost"
+    },
+    "plugins": {
+      "api": {
+        "secret": "change me"
+      }
+    }
+  },
+  "production": {},
+  "development": {}
+}
+
