@@ -1,5 +1,3 @@
 node_modules
 migrations/.migrate
-.config.test.json
-.config.production.json
-.config.development.json
+config.json

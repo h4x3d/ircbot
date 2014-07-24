@@ -1,8 +1,0 @@
----
-project_name: ircbot
-projects_path: /home/ircbot/ircbot
-repository_url: git@github.com:h4x3d/ircbot.git
-service_user: ircbot
-nvm_path: /home/ircbot/nvm
-nvm_script: /home/ircbot/nvm/nvm.sh
-nodejs_version: v0.10.25

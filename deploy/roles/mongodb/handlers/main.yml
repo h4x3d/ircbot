@@ -1,3 +1,0 @@
----
-- name: restart mongodb
-  command: service mongodb restart
