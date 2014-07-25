@@ -30,5 +30,6 @@ client.use(require('./lib/plugins/spotify'));
 client.use(require('./lib/plugins/h'));
 client.use(require('./lib/plugins/laugh'));
 client.use(require('./lib/plugins/api'));
+client.use(require('./lib/plugins/nick'));
 
 client.stream.on('error', logger.error);
