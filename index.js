@@ -27,6 +27,7 @@ client.use(require('./lib/plugins/say'));
 client.use(require('./lib/plugins/auth'));
 client.use(require('./lib/plugins/title'));
 client.use(require('./lib/plugins/spotify'));
+client.use(require('./lib/plugins/colors'));
 // client.use(require('./lib/plugins/h'));
 // client.use(require('./lib/plugins/laugh'));
 // client.use(require('./lib/plugins/api'));
