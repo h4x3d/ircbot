@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --timeout 5000 test/*/*.js",
     "deploy": "bash deploy/deploy.sh"
   },
   "author": "Riku Rouvila",
@@ -31,5 +31,8 @@
     "passport-http-bearer": "~1.0.1",
     "socketio-jwt": "~2.3.4",
     "mathjs": "~0.26.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.21.4"
   }
 }
