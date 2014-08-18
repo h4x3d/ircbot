@@ -30,7 +30,8 @@
     "jwt-simple": "~0.2.0",
     "passport-http-bearer": "~1.0.1",
     "socketio-jwt": "~2.3.4",
-    "mathjs": "~0.26.0"
+    "mathjs": "~0.26.0",
+    "mime": "~1.2.11"
   },
   "devDependencies": {
     "mocha": "~1.21.4"
