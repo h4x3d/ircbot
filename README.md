@@ -115,3 +115,5 @@ npm install
 ```
 node index.js
 ```
+
+`npm test` only passes if you have ircserver running in port 6667 on your local machine
