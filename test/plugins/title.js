@@ -17,7 +17,7 @@ describe('"title" plugin', function(){
 
     this.spy.on('message', function(message) {
       assert.equal(message.from, this.client.me);
-      assert.equal(message.message, 'Twitter');
+      assert.ok(message.message.indexOf('Twitter') > -1);
       done();
     }.bind(this));
   });
