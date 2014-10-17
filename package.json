@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "slate-irc": "^0.6.0",
-    "url-to-title": "~1.0.3",
+    "url-to-title": "~1.0.4",
     "lodash": "~2.4.1",
     "routes": "^1.1.0",
     "request": "~2.37.0",
