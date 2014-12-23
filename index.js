@@ -46,11 +46,7 @@ function configure() {
 
   client.stream.on('error', function(err) {
     logger.error(err);
-
-    if(err.code === 'ECONNREFUSED') {
-      setTimeout(connect, 5000);
-    }
-
+    setTimeout(connect, 5000);
   });
 
   client.stream.on('end', connect);
