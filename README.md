@@ -12,6 +12,11 @@ cd ircbot
 npm install
 ```
 
+Create `config.json` file. See [config.template.json](https://github.com/h4x3d/ircbot/blob/master/config.template.json) for possible options.
+The config file consists of environment specific blocks. Environment variable `NODE_ENV` determines which block is used. If the environment variable is not present, the `development` block will be selected. 
+`all` block is always used and the block selected is merged into it so that it overwrites the values defined in it.
+
+
 Start your bot
 ```
 node index.js
@@ -109,7 +114,7 @@ cd ircbot
 npm install
 ```
 
-* Install and start [UnrealIRCd](http://www.unrealircd.com/)
+* _optional_ Install and start [UnrealIRCd](http://www.unrealircd.com/) 
 
 * Start bot
 ```
